@@ -12,6 +12,11 @@
 		8E0832611E7579F0001F6B64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E08325F1E7579F0001F6B64 /* Main.storyboard */; };
 		8E0832631E7579F0001F6B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832621E7579F0001F6B64 /* Assets.xcassets */; };
 		8E0832661E7579F0001F6B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832641E7579F0001F6B64 /* LaunchScreen.storyboard */; };
+		8E08326F1E757B26001F6B64 /* RemachineScript_Personal_Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E08326E1E757B26001F6B64 /* RemachineScript_Personal_Use.ttf */; };
+		8E0832741E757B36001F6B64 /* DroidSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832701E757B36001F6B64 /* DroidSerif-Bold.ttf */; };
+		8E0832751E757B36001F6B64 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */; };
+		8E0832761E757B36001F6B64 /* DroidSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */; };
+		8E0832771E757B36001F6B64 /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		8E0832621E7579F0001F6B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0832651E7579F0001F6B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E0832671E7579F0001F6B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E08326E1E757B26001F6B64 /* RemachineScript_Personal_Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RemachineScript_Personal_Use.ttf; sourceTree = "<group>"; };
+		8E0832701E757B36001F6B64 /* DroidSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Bold.ttf"; sourceTree = "<group>"; };
+		8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
+		8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		8E08325A1E7579F0001F6B64 /* iShopApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E08326D1E757B17001F6B64 /* Custom Fonts */,
 				8E08325B1E7579F0001F6B64 /* AppDelegate.swift */,
 				8E08325D1E7579F0001F6B64 /* ViewController.swift */,
 				8E08325F1E7579F0001F6B64 /* Main.storyboard */,
@@ -62,6 +73,18 @@
 				8E0832671E7579F0001F6B64 /* Info.plist */,
 			);
 			path = iShopApp;
+			sourceTree = "<group>";
+		};
+		8E08326D1E757B17001F6B64 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8E08326E1E757B26001F6B64 /* RemachineScript_Personal_Use.ttf */,
+				8E0832701E757B36001F6B64 /* DroidSerif-Bold.ttf */,
+				8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */,
+				8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */,
+				8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */,
+			);
+			name = "Custom Fonts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +146,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0832761E757B36001F6B64 /* DroidSerif-Italic.ttf in Resources */,
+				8E08326F1E757B26001F6B64 /* RemachineScript_Personal_Use.ttf in Resources */,
 				8E0832661E7579F0001F6B64 /* LaunchScreen.storyboard in Resources */,
 				8E0832631E7579F0001F6B64 /* Assets.xcassets in Resources */,
+				8E0832771E757B36001F6B64 /* DroidSerif-Regular.ttf in Resources */,
+				8E0832741E757B36001F6B64 /* DroidSerif-Bold.ttf in Resources */,
+				8E0832751E757B36001F6B64 /* DroidSerif-BoldItalic.ttf in Resources */,
 				8E0832611E7579F0001F6B64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +325,7 @@
 				8E08326C1E7579F0001F6B64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
