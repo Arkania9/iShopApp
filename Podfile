@@ -7,4 +7,9 @@ target 'iShopApp' do
 
   # Pods for iShopApp
 	pod 'Firebase/Core'
+pod 'FBSDKLoginKit'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'SwiftKeychainWrapper'
 end
