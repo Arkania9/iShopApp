@@ -1,0 +1,6 @@
+framework module Pods_iShopApp {
+  umbrella header "Pods-iShopApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
