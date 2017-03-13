@@ -28,7 +28,7 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCollectionCell {
-            cell.featured = featured[indexPath.item]
+            cell.featured = featured[indexPath.row]
             return cell
         }
         return UICollectionViewCell()

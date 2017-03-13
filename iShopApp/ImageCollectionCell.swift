@@ -12,7 +12,8 @@ class ImageCollectionCell: UICollectionViewCell {
     @IBOutlet weak var productLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var bgImage: UIImageView!
-
+    @IBOutlet weak var sliderImg: UIImageView!
+    
     var featured: Featured? {
         didSet {
             self.updateUI()
@@ -23,6 +24,7 @@ class ImageCollectionCell: UICollectionViewCell {
         productLbl.text = featured?.description
         priceLbl.text = featured?.price
         bgImage.image = featured?.featuredImage
+        sliderImg.image = featured?.sliderImage
     }
     
 }

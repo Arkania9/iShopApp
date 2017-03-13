@@ -522,6 +522,12 @@
                                                         <constraint firstAttribute="height" constant="50" id="3IW-cq-ifg"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="First" translatesAutoresizingMaskIntoConstraints="NO" id="b7I-fi-A5W">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="4RW-Vv-GIP"/>
+                                                        <constraint firstAttribute="height" constant="10" id="kDP-e0-aFX"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -531,7 +537,9 @@
                                             <constraint firstItem="ZwH-Fk-yjY" firstAttribute="leading" secondItem="b5M-86-8zi" secondAttribute="leadingMargin" constant="8" id="KbA-WJ-HFQ"/>
                                             <constraint firstAttribute="trailing" secondItem="P0i-r5-KYg" secondAttribute="trailing" id="LaX-F3-gcE"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="ZwH-Fk-yjY" secondAttribute="bottom" constant="6" id="MNt-MU-erH"/>
+                                            <constraint firstItem="b7I-fi-A5W" firstAttribute="top" secondItem="b5M-86-8zi" secondAttribute="topMargin" constant="16" id="Nh5-xz-dbi"/>
                                             <constraint firstItem="L4c-pS-Ujy" firstAttribute="top" secondItem="b5M-86-8zi" secondAttribute="top" id="OtX-yh-Cp2"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="b7I-fi-A5W" secondAttribute="trailing" constant="16" id="Tba-rM-Ojm"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="EPC-wE-J4x" secondAttribute="trailing" constant="8" id="a4f-1b-GKY"/>
                                             <constraint firstAttribute="trailing" secondItem="L4c-pS-Ujy" secondAttribute="trailing" id="w5B-te-bM3"/>
                                             <constraint firstAttribute="bottom" secondItem="P0i-r5-KYg" secondAttribute="bottom" id="wi4-ey-hHk"/>
@@ -542,6 +550,7 @@
                                             <outlet property="bgImage" destination="L4c-pS-Ujy" id="NPj-HS-8AN"/>
                                             <outlet property="priceLbl" destination="EPC-wE-J4x" id="xsr-QH-WQE"/>
                                             <outlet property="productLbl" destination="ZwH-Fk-yjY" id="EfB-ao-c1J"/>
+                                            <outlet property="sliderImg" destination="b7I-fi-A5W" id="ajA-0p-Gel"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -572,6 +581,7 @@
     </scenes>
     <resources>
         <image name="Background" width="640" height="1125"/>
+        <image name="First" width="57" height="14"/>
         <image name="arrow" width="54" height="54"/>
         <image name="bgImage" width="640" height="877"/>
         <image name="menu" width="51" height="33"/>
