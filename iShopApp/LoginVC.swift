@@ -18,7 +18,10 @@ class LoginVC: UIViewController {
     @IBOutlet weak var errorField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.revealViewController().rearViewRevealWidth = 300
+        self.revealViewController().frontViewShadowRadius = 2
+        self.revealViewController().frontViewShadowOpacity = 0.6
+        self.revealViewController().rearViewRevealOverdraw = 0
     }
     
     func startFbLogin() {
@@ -40,7 +43,7 @@ class LoginVC: UIViewController {
             if error != nil {
                 print("KAMIL: UNABLE to authethicate with Firebase")
             } else {
-                print("KAMIL: SUCCESFULLY authethicated with Firebase")
+                self.performSegue(withIdentifier: "showMainVC", sender: nil)
             }
         })
     }

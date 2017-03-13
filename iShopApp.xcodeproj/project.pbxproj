@@ -23,6 +23,7 @@
 		8E76A38C1E769CF7009EE371 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E76A38B1E769CF7009EE371 /* SWRevealViewController.m */; };
 		8EE9256B1E76BE1E005DDDB3 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */; };
 		8EE9256D1E76CF65005DDDB3 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256C1E76CF65005DDDB3 /* Featured.swift */; };
+		8EE9256F1E76EAF2005DDDB3 /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */; };
 		8EFA04EF1E75F2800033C1CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		8E76A38B1E769CF7009EE371 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		8EE9256C1E76CF65005DDDB3 /* Featured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
+		8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
 		8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EFA04F41E75FC0A0033C1CE /* iShopApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iShopApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 				8E08325D1E7579F0001F6B64 /* LoginVC.swift */,
 				8E76A3861E769403009EE371 /* RegisterVC.swift */,
 				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
+				8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				8EE9256D1E76CF65005DDDB3 /* Featured.swift in Sources */,
 				8E76A3871E769403009EE371 /* RegisterVC.swift in Sources */,
 				8E2049891E76B1C100FF0DE4 /* MainVC.swift in Sources */,
+				8EE9256F1E76EAF2005DDDB3 /* SlideMenuVC.swift in Sources */,
 				8E08325E1E7579F0001F6B64 /* LoginVC.swift in Sources */,
 				8EE9256B1E76BE1E005DDDB3 /* ImageCollectionCell.swift in Sources */,
 				8E08325C1E7579F0001F6B64 /* AppDelegate.swift in Sources */,

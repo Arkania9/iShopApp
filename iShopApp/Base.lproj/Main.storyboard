@@ -18,6 +18,31 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Slide MenuVC-->
+        <scene sceneID="jMQ-vq-vQb">
+            <objects>
+                <viewController id="z4O-ea-22J" customClass="SlideMenuVC" customModule="iShopApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rIl-q4-ElV"/>
+                        <viewControllerLayoutGuide type="bottom" id="xNH-PM-im3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zHx-vi-siA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmB-3u-uKB">
+                                <frame key="frameInset" minX="67" minY="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.25024567610062892" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nU9-dB-y2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-678" y="56"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -202,7 +227,7 @@
                         <outlet property="emailField" destination="Wag-3p-Ik9" id="kgg-9h-a4r"/>
                         <outlet property="errorField" destination="3IO-7J-lb6" id="aNt-XC-Bx4"/>
                         <outlet property="pwdField" destination="UDb-gx-PC9" id="5aR-fs-sXL"/>
-                        <segue destination="ElW-qM-5x0" kind="show" identifier="showMainVC" id="ZW5-3M-mBt"/>
+                        <segue destination="ElW-qM-5x0" kind="custom" identifier="showMainVC" customClass="SWRevealViewControllerSeguePushController" id="YdG-nX-2Y2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -223,12 +248,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="F80-P4-3Qy"/>
+                        <segue destination="z4O-ea-22J" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="YRj-qK-MHw"/>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="x4w-uv-tUC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e2-hp-2hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401" y="-663"/>
+            <point key="canvasLocation" x="76" y="-736"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="BKe-jz-viX">
@@ -572,11 +598,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="SVz-hf-ut6" id="TNe-S4-FwA"/>
+                        <outlet property="menuButton" destination="Qji-ou-JFp" id="tWV-WL-8uV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPj-23-PyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="811.84407796101959"/>
+            <point key="canvasLocation" x="76" y="790"/>
         </scene>
     </scenes>
     <resources>

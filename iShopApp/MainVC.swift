@@ -10,6 +10,7 @@ import UIKit
 
 class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var menuButton: UIButton!
     
     var featured = Featured.fetchFeatured()
     
@@ -17,6 +18,9 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for:UIControlEvents.touchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
     }
     

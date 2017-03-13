@@ -21,7 +21,7 @@ class RegisterVC: UIViewController {
     func signUpToFirebase(email: String, pwd: String) {
         FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
             if error == nil {
-                print("KAMIL: USER create account in Firebase")
+                self.errorField.text = "Account was created, back to login"
                 self.emailField.text = ""
                 self.pwdField.text = ""
             } else {
