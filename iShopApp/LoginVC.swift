@@ -51,7 +51,7 @@ class LoginVC: UIViewController {
                 _ = FIRAuthErrorCode.errorCodeInvalidEmail
             self.errorField.text = "Email or Password are wrong"
             } else {
-                print("KAMIL: SUCCESFULLY login to Firebase")
+                self.performSegue(withIdentifier: "showMainVC", sender: nil)
                 self.emailField.text = ""
                 self.pwdField.text = ""
                 self.errorField.text = ""

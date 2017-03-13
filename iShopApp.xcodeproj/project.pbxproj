@@ -18,7 +18,11 @@
 		8E0832751E757B36001F6B64 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */; };
 		8E0832761E757B36001F6B64 /* DroidSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */; };
 		8E0832771E757B36001F6B64 /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */; };
+		8E2049891E76B1C100FF0DE4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2049881E76B1C100FF0DE4 /* MainVC.swift */; };
 		8E76A3871E769403009EE371 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E76A3861E769403009EE371 /* RegisterVC.swift */; };
+		8E76A38C1E769CF7009EE371 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E76A38B1E769CF7009EE371 /* SWRevealViewController.m */; };
+		8EE9256B1E76BE1E005DDDB3 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */; };
+		8EE9256D1E76CF65005DDDB3 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256C1E76CF65005DDDB3 /* Featured.swift */; };
 		8EFA04EF1E75F2800033C1CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +42,13 @@
 		8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
 		8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
+		8E2049881E76B1C100FF0DE4 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8E76A3861E769403009EE371 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		8E76A3881E769CF7009EE371 /* iShopApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iShopApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E76A38A1E769CF7009EE371 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8E76A38B1E769CF7009EE371 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
+		8EE9256C1E76CF65005DDDB3 /* Featured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
 		8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EFA04F41E75FC0A0033C1CE /* iShopApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iShopApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +124,7 @@
 			children = (
 				8E08325D1E7579F0001F6B64 /* LoginVC.swift */,
 				8E76A3861E769403009EE371 /* RegisterVC.swift */,
+				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 		8EFA04F11E75F3690033C1CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 		8EFA04F21E75F36D0033C1CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8EE9256C1E76CF65005DDDB3 /* Featured.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -135,6 +148,9 @@
 		8EFA04F31E75F3820033C1CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E76A38A1E769CF7009EE371 /* SWRevealViewController.h */,
+				8E76A38B1E769CF7009EE371 /* SWRevealViewController.m */,
+				8E76A3881E769CF7009EE371 /* iShopApp-Bridging-Header.h */,
 				8E08325B1E7579F0001F6B64 /* AppDelegate.swift */,
 				8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */,
 				8E0832671E7579F0001F6B64 /* Info.plist */,
@@ -187,6 +203,7 @@
 					8E0832571E7579EF001F6B64 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 296AS6B7EJ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -286,9 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE9256D1E76CF65005DDDB3 /* Featured.swift in Sources */,
 				8E76A3871E769403009EE371 /* RegisterVC.swift in Sources */,
+				8E2049891E76B1C100FF0DE4 /* MainVC.swift in Sources */,
 				8E08325E1E7579F0001F6B64 /* LoginVC.swift in Sources */,
+				8EE9256B1E76BE1E005DDDB3 /* ImageCollectionCell.swift in Sources */,
 				8E08325C1E7579F0001F6B64 /* AppDelegate.swift in Sources */,
+				8E76A38C1E769CF7009EE371 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,12 +431,15 @@
 			baseConfigurationReference = 659EA765968DD51BFED46447 /* Pods-iShopApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iShopApp/iShopApp.entitlements;
 				DEVELOPMENT_TEAM = 296AS6B7EJ;
 				INFOPLIST_FILE = iShopApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myProjects.iShopApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iShopApp/iShopApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -425,12 +449,14 @@
 			baseConfigurationReference = 6B1A6F57C9D7C4F3C888A6DA /* Pods-iShopApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iShopApp/iShopApp.entitlements;
 				DEVELOPMENT_TEAM = 296AS6B7EJ;
 				INFOPLIST_FILE = iShopApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.myProjects.iShopApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iShopApp/iShopApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
