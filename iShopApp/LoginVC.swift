@@ -12,7 +12,10 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 class LoginVC: UIViewController {
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var pwdField: UITextField!
 
+    @IBOutlet weak var errorField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,10 +45,35 @@ class LoginVC: UIViewController {
         })
     }
     
+    func signInToFirebase(email: String, pwd: String) {
+        FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+            if error != nil {
+                _ = FIRAuthErrorCode.errorCodeInvalidEmail
+            self.errorField.text = "Email or Password are wrong"
+            } else {
+                print("KAMIL: SUCCESFULLY login to Firebase")
+                self.emailField.text = ""
+                self.pwdField.text = ""
+                self.errorField.text = ""
+            }
+        })
+    }
+    
     @IBAction func fbLoginPressed(_ sender: AnyObject) {
         startFbLogin()
     }
     
+    @IBAction func firebaseLoginPressed(_ sender: AnyObject) {
+        guard let email = emailField.text, email != "" else {
+            self.errorField.text = "Email field can't be empty"
+            return
+        }
+        guard let pwd = pwdField.text, pwd != "" else {
+            self.errorField.text = "Password field can't be empty"
+            return
+        }
+        signInToFirebase(email: email, pwd: pwd)
+    }
 
 }
 
