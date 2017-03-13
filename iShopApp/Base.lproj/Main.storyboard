@@ -27,21 +27,202 @@
                         <viewControllerLayoutGuide type="bottom" id="xNH-PM-im3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zHx-vi-siA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmB-3u-uKB">
-                                <frame key="frameInset" minX="67" minY="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25024567610062892" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="7Cb-fH-fAC"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dzS-eW-Aeh" userLabel="MEN">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menEclipse" translatesAutoresizingMaskIntoConstraints="NO" id="gad-Kd-6W5">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="SXE-gz-h6C"/>
+                                            <constraint firstAttribute="width" constant="25" id="WMh-Ze-Jze"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo2-yg-OCt">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="nQ5-4h-lcr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="MEN">
+                                            <color key="titleColor" red="0.094117647058823528" green="0.55686274509803924" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4K-nd-Pk3">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="PN5-Yd-J8O"/>
+                                            <constraint firstAttribute="width" constant="16" id="YIe-fd-jHJ"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow-1"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="icc-OQ-TS8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-WC-qk7" userLabel="Women">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womenEclipse" translatesAutoresizingMaskIntoConstraints="NO" id="mN4-MD-saB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="DUh-9c-OqY"/>
+                                            <constraint firstAttribute="width" constant="25" id="UmY-cb-ZVx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMO-7e-Nlz">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="e7E-Kk-Kp2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="WOMEN">
+                                            <color key="titleColor" red="0.89803921568627454" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-ys-EdX">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="a4s-TQ-SJd"/>
+                                            <constraint firstAttribute="height" constant="25" id="sx9-w5-uHs"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow-1"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="vKB-xb-Gi8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vXJ-4N-q8g" userLabel="Kids">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kidsEclipse" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-I2-zJA">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="MF8-Sn-R8y"/>
+                                            <constraint firstAttribute="width" constant="25" id="xCw-tb-W72"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzQ-ka-hft">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="q1O-jb-9Z0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="KIDS">
+                                            <color key="titleColor" red="0.76078431372549016" green="0.75294117647058822" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5h-Ol-vBQ">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="BaA-4l-cHV"/>
+                                            <constraint firstAttribute="height" constant="25" id="PZE-fd-LRd"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow-1"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="oVa-oY-fJ3"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ml3-HY-FKd" userLabel="MyCart">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopBag" translatesAutoresizingMaskIntoConstraints="NO" id="1DW-3U-aXK">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="BJE-Zy-ft4"/>
+                                            <constraint firstAttribute="width" constant="25" id="GIh-7O-R0W"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv3-xz-KKN">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="xR6-yx-04F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="My Cart">
+                                            <color key="titleColor" red="0.95686274509803926" green="0.5725490196078431" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MEm-uo-rxO" userLabel="Categories">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Categories" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-OQ-jiW">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Dkm-ro-7e5"/>
+                                            <constraint firstAttribute="width" constant="25" id="l5V-iw-l9C"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-rP-GGg">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="zSo-Mk-Nce"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="Categories">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-Wp-jM9" userLabel="Account">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="DC6-2m-IaE">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="epD-QU-Lzr"/>
+                                            <constraint firstAttribute="width" constant="25" id="gHf-1u-bGB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fx-7W-Bfd">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="aJP-HD-IZD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="Account">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Noe-AL-GJy" userLabel="SignOut">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signOut" translatesAutoresizingMaskIntoConstraints="NO" id="X82-z8-lpE">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Zyn-dR-JXP"/>
+                                            <constraint firstAttribute="height" constant="25" id="c83-Lw-VmQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cl-Nk-VvZ">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="m95-dx-7mn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="Sign out">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0dr-WC-qk7" secondAttribute="trailing" constant="16" id="0Fc-2a-Srs"/>
+                            <constraint firstItem="ITP-Wp-jM9" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="3M8-Ql-qq8"/>
+                            <constraint firstItem="dzS-eW-Aeh" firstAttribute="top" secondItem="MEm-uo-rxO" secondAttribute="bottom" constant="46" id="5Nb-HV-9PW"/>
+                            <constraint firstItem="7Cb-fH-fAC" firstAttribute="top" secondItem="zHx-vi-siA" secondAttribute="top" id="5sm-Er-83X"/>
+                            <constraint firstItem="vXJ-4N-q8g" firstAttribute="top" secondItem="0dr-WC-qk7" secondAttribute="bottom" constant="30" id="CoV-W4-nJG"/>
+                            <constraint firstItem="xNH-PM-im3" firstAttribute="top" secondItem="7Cb-fH-fAC" secondAttribute="bottom" id="T9E-g5-KD4"/>
+                            <constraint firstItem="Noe-AL-GJy" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="TJA-LY-4zi"/>
+                            <constraint firstItem="xNH-PM-im3" firstAttribute="top" secondItem="Noe-AL-GJy" secondAttribute="bottom" constant="120" id="VGD-aa-oF8"/>
+                            <constraint firstItem="0dr-WC-qk7" firstAttribute="top" secondItem="dzS-eW-Aeh" secondAttribute="bottom" constant="30" id="Zhx-yk-Ldb"/>
+                            <constraint firstAttribute="trailing" secondItem="7Cb-fH-fAC" secondAttribute="trailing" id="acg-Br-AfJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vXJ-4N-q8g" secondAttribute="trailing" constant="16" id="fln-I8-Qaa"/>
+                            <constraint firstItem="Ml3-HY-FKd" firstAttribute="top" secondItem="rIl-q4-ElV" secondAttribute="bottom" constant="120" id="j4R-eW-ejC"/>
+                            <constraint firstItem="MEm-uo-rxO" firstAttribute="top" secondItem="Ml3-HY-FKd" secondAttribute="bottom" constant="40" id="jNp-a9-7d0"/>
+                            <constraint firstItem="MEm-uo-rxO" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="l8o-8p-0H6"/>
+                            <constraint firstItem="Ml3-HY-FKd" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="mwz-tl-3eQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dzS-eW-Aeh" secondAttribute="trailing" constant="16" id="rcH-5d-iug"/>
+                            <constraint firstItem="7Cb-fH-fAC" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leading" id="rnG-wI-iCd"/>
+                            <constraint firstItem="Noe-AL-GJy" firstAttribute="top" secondItem="ITP-Wp-jM9" secondAttribute="bottom" constant="40" id="ruD-df-zee"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nU9-dB-y2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-678" y="56"/>
+            <point key="canvasLocation" x="-680" y="55.322338830584712"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
@@ -608,10 +789,18 @@
     </scenes>
     <resources>
         <image name="Background" width="640" height="1125"/>
+        <image name="Categories" width="47" height="47"/>
         <image name="First" width="57" height="14"/>
+        <image name="account" width="38" height="36"/>
         <image name="arrow" width="54" height="54"/>
+        <image name="arrow-1" width="16" height="33"/>
         <image name="bgImage" width="640" height="877"/>
+        <image name="kidsEclipse" width="30" height="30"/>
+        <image name="menEclipse" width="30" height="30"/>
         <image name="menu" width="51" height="33"/>
         <image name="search" width="51" height="50"/>
+        <image name="shopBag" width="44" height="42"/>
+        <image name="signOut" width="37" height="31"/>
+        <image name="womenEclipse" width="30" height="30"/>
     </resources>
 </document>
