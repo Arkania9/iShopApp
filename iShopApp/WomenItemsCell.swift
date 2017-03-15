@@ -8,7 +8,8 @@
 
 import UIKit
 import FirebaseStorage
-
+import AlamofireImage
+import Alamofire
 class WomenItemsCell: UITableViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
@@ -20,20 +21,16 @@ class WomenItemsCell: UITableViewCell {
         self.item = item
         if img != nil {
             self.itemImg.image = img
+            print("IMAGE FROM CACHE")
         } else {
-            let convertImageURL = NSURL(string: item.imageURL)
-            URLSession.shared.dataTask(with: convertImageURL! as URL, completionHandler: { (data, response, error) -> Void in
-                if error != nil {
-                    print(error)
+            let imageURL = URL(string: item.imageURL)
+            Alamofire.request(imageURL!).responseImage(completionHandler: { (response) in
+                guard let image = response.result.value else {
                     return
                 }
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let image = UIImage(data: data!)
-                    self.itemImg.image = image
-                    WomenVC.imageCache.setObject(image!, forKey: item.imageURL as NSString)
-                })
-                
-            }).resume()
+                self.itemImg.image = image
+                imageCache.add(image, withIdentifier: item.imageURL)
+            })
         }
         self.itemTitle.text = item.title
         self.itemPrice.text = "$\(item.price)"

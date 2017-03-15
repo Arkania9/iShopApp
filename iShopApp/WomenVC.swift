@@ -10,17 +10,38 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseDatabase
+import AlamofireImage
+import Alamofire
 
 class WomenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var items = [Item]()
-    static var imageCache:NSCache<NSString, UIImage> = NSCache()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        downloadCurrentItemFromFirebase()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = items[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "WomenItemsCell") as? WomenItemsCell {
+            if let img = imageCache.image(withIdentifier: item.imageURL) {
+                cell.configureCell(item: item, img: img)
+            } else {
+                cell.configureCell(item: item)
+            }
+            return cell
+        }
+        return WomenItemsCell()
+    }
+    
+    func downloadCurrentItemFromFirebase() {
         DataService.ds.REF_WOMEN_DB.observe(.value, with: { (snapshot) in
             self.items = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -36,24 +57,20 @@ class WomenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         })
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "WomenItemsCell") as? WomenItemsCell {
-            if let img = WomenVC.imageCache.object(forKey: item.imageURL as NSString) {
-                cell.configureCell(item: item, img: img)
-            } else {
-                cell.configureCell(item: item)
-            }
-            return cell
-        }
-        return WomenItemsCell()
-    }
-    
     @IBAction func backBtnPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWomenDetails" {
+            if let destination = segue.destination as? DetailsVC {
+                destination.itemKey = items[tableView.indexPathForSelectedRow!.row].itemKey
+            }
+        }
+    }
+    
+    
+    
+    
+    
 }
