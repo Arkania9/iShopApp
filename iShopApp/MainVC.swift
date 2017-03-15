@@ -38,4 +38,16 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         return UICollectionViewCell()
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetails" {
+//            if let destination = segue.destination as? DetailsVC {
+//                let cell = sender as! UICollectionViewCell
+//                let indexPath = collectionView.indexPath(for: cell)
+//                destination.something = featured[(indexPath?.row)!].something
+//                destination.desc = featured[(indexPath?.row)!].description
+//            }
+//        }
+//    }
+//    
+    
 }

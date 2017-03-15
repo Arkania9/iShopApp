@@ -21,7 +21,7 @@ class ImageCollectionCell: UICollectionViewCell {
     }
     
     private func updateUI() {
-        productLbl.text = featured?.description
+        productLbl.text = featured?.title
         priceLbl.text = featured?.price
         bgImage.image = featured?.featuredImage
         sliderImg.image = featured?.sliderImage
