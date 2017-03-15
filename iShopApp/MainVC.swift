@@ -11,7 +11,6 @@ import UIKit
 class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
-    
     var featured = Featured.fetchFeatured()
     
     override func viewDidLoad() {
@@ -23,7 +22,7 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
     }
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -38,16 +37,4 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         return UICollectionViewCell()
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showDetails" {
-//            if let destination = segue.destination as? DetailsVC {
-//                let cell = sender as! UICollectionViewCell
-//                let indexPath = collectionView.indexPath(for: cell)
-//                destination.something = featured[(indexPath?.row)!].something
-//                destination.desc = featured[(indexPath?.row)!].description
-//            }
-//        }
-//    }
-//    
-    
 }

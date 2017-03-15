@@ -69,6 +69,9 @@
                                         <state key="normal" title="WOMEN">
                                             <color key="titleColor" red="0.76078431369999999" green="0.75294117650000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="PG2-1E-XqB" kind="show" id="Vgv-pG-znl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -687,7 +690,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="460"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage" translatesAutoresizingMaskIntoConstraints="NO" id="L4c-pS-Ujy"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage1" translatesAutoresizingMaskIntoConstraints="NO" id="L4c-pS-Ujy"/>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$133.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-wE-J4x">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="Ofv-Lh-mM5"/>
@@ -795,6 +798,9 @@
                                             <constraint firstAttribute="width" constant="17" id="vsC-M6-T3W"/>
                                         </constraints>
                                         <state key="normal" image="arrowBack"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="PG2-1E-XqB" eventType="touchUpInside" id="EPx-oe-kgB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxc-Mw-wHS">
                                         <constraints>
@@ -815,40 +821,40 @@
                                     <constraint firstItem="kxc-Mw-wHS" firstAttribute="centerY" secondItem="N6W-yY-C8j" secondAttribute="centerY" id="oaI-hq-XOu"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-56-zdW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-56-zdW">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="260" id="SuS-Pu-32N">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WomenItemsCell" rowHeight="260" id="SuS-Pu-32N" customClass="WomenItemsCell" customModule="iShopApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="260"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuS-Pu-32N" id="zAY-bc-27F">
-                                            <frame key="frameInset" width="375" height="259"/>
+                                            <frame key="frameInset" width="375" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoes" translatesAutoresizingMaskIntoConstraints="NO" id="vgG-Rq-8jT"/>
-                                                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-b0-VsF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgG-Rq-8jT"/>
+                                                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-b0-VsF">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="FSs-tl-Njt"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL STARS SHOES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sf-hW-O9F">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sf-hW-O9F">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="2Cw-OT-VKZ"/>
                                                         <constraint firstAttribute="width" constant="210" id="wn6-2K-Jh9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="DroidSerif-Bold" family="Droid Serif" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$220.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-gb-BrL">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adr-gb-BrL">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="3Zd-ra-rrg"/>
                                                         <constraint firstAttribute="width" constant="98" id="tu2-Zp-yzk"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="DroidSerif-Bold" family="Droid Serif" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
@@ -867,6 +873,11 @@
                                                 <constraint firstItem="Adr-gb-BrL" firstAttribute="trailing" secondItem="zAY-bc-27F" secondAttribute="trailingMargin" id="xnV-nJ-xVn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemImg" destination="vgG-Rq-8jT" id="qrt-lU-eJ5"/>
+                                            <outlet property="itemPrice" destination="Adr-gb-BrL" id="gf1-Ni-CXz"/>
+                                            <outlet property="itemTitle" destination="8sf-hW-O9F" id="sNk-fx-WQ6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -882,6 +893,11 @@
                             <constraint firstItem="ukE-56-zdW" firstAttribute="top" secondItem="N6W-yY-C8j" secondAttribute="bottom" id="yZV-ep-Y3Y"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="tableView" destination="ukE-56-zdW" id="M1c-nK-RVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="254-l0-aPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -895,14 +911,16 @@
         <image name="account" width="38" height="36"/>
         <image name="arrow" width="54" height="54"/>
         <image name="arrowBack" width="22" height="43"/>
-        <image name="bgImage" width="640" height="877"/>
+        <image name="bgImage1" width="640" height="877"/>
         <image name="kidsEclipse" width="30" height="30"/>
         <image name="menEclipse" width="30" height="30"/>
         <image name="menu" width="51" height="33"/>
         <image name="search" width="51" height="50"/>
-        <image name="shoes" width="640" height="506"/>
         <image name="shopBag" width="44" height="42"/>
         <image name="signOut" width="37" height="31"/>
         <image name="womenEclipse" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wfP-L3-tWC"/>
+    </inferredMetricsTieBreakers>
 </document>

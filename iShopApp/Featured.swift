@@ -27,7 +27,7 @@ class Featured {
     
     static func fetchFeatured() -> [Featured] {
         return [
-            Featured(title: "RETRO GLASSES", featuredImage: UIImage(named: "bgImage")!, price: "$133.00", sliderImage: UIImage(named: "First")!, description: "SOMETHING HERE"),
+            Featured(title: "RETRO GLASSES", featuredImage: UIImage(named: "bgImage1")!, price: "$133.00", sliderImage: UIImage(named: "First")!, description: "SOMETHING HERE"),
             
             Featured(title: "MODERN DRESS", featuredImage: UIImage(named: "bgImage2")!, price: "$241.50", sliderImage: UIImage(named: "Middle")!, description: "SOMETHING THERE"),
             
