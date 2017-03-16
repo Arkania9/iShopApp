@@ -38,7 +38,8 @@ class Item {
         self._itemKey = itemKey
         
         guard let title = itemData["title"] as? String,
-        let imageURL = itemData["image"] as? String,
+        let images = itemData["images"] as? Dictionary<String, AnyObject>,
+        let imageURL = images["image1"] as? String,
         let price = itemData["price"] as? Double else {
             return
         }

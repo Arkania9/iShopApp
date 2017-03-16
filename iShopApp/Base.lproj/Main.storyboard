@@ -831,7 +831,7 @@
                                             <frame key="frameInset" width="375" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoes" translatesAutoresizingMaskIntoConstraints="NO" id="vgG-Rq-8jT"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="vgG-Rq-8jT"/>
                                                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-b0-VsF">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -867,7 +867,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Pfd-b0-VsF" secondAttribute="trailing" id="Jbv-DC-ob5"/>
                                                 <constraint firstItem="vgG-Rq-8jT" firstAttribute="top" secondItem="zAY-bc-27F" secondAttribute="top" id="gwz-wN-To8"/>
                                                 <constraint firstItem="Pfd-b0-VsF" firstAttribute="leading" secondItem="zAY-bc-27F" secondAttribute="leading" id="jW8-23-s7n"/>
-                                                <constraint firstAttribute="bottom" secondItem="vgG-Rq-8jT" secondAttribute="bottom" id="lgr-f7-eTI"/>
+                                                <constraint firstAttribute="bottom" secondItem="vgG-Rq-8jT" secondAttribute="bottom" constant="-144" id="lgr-f7-eTI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="8sf-hW-O9F" secondAttribute="bottom" constant="5" id="sXT-Lm-b8q"/>
                                                 <constraint firstItem="8sf-hW-O9F" firstAttribute="leading" secondItem="zAY-bc-27F" secondAttribute="leadingMargin" id="sfy-J8-Dfh"/>
                                                 <constraint firstItem="Adr-gb-BrL" firstAttribute="trailing" secondItem="zAY-bc-27F" secondAttribute="trailingMargin" id="xnV-nJ-xVn"/>
@@ -973,18 +973,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage1" translatesAutoresizingMaskIntoConstraints="NO" id="FPg-FK-FJp"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="FPg-FK-FJp"/>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="FPg-FK-FJp" secondAttribute="trailing" id="ZnC-1r-8pD"/>
-                                            <constraint firstAttribute="bottom" secondItem="FPg-FK-FJp" secondAttribute="bottom" id="kPi-RY-R2n"/>
+                                            <constraint firstAttribute="bottom" secondItem="FPg-FK-FJp" secondAttribute="bottom" constant="-144" id="kPi-RY-R2n"/>
                                             <constraint firstItem="FPg-FK-FJp" firstAttribute="top" secondItem="VYp-BD-T7a" secondAttribute="top" id="ug3-Ly-j7O"/>
                                             <constraint firstItem="FPg-FK-FJp" firstAttribute="leading" secondItem="VYp-BD-T7a" secondAttribute="leading" id="wKa-qE-GiK"/>
                                         </constraints>
                                         <size key="customSize" width="375" height="270"/>
                                         <connections>
-                                            <outlet property="bgImage" destination="FPg-FK-FJp" id="xp7-ZW-t7h"/>
+                                            <outlet property="bgImage" destination="FPg-FK-FJp" id="zBP-fu-iDD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1002,17 +1002,16 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uE6-aP-7W9">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-hz-Uf9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$320.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKa-wL-wgu">
                                                 <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="17"/>
-                                                <state key="normal" title="$425.00">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="VvL-hz-Uf9" firstAttribute="centerY" secondItem="uE6-aP-7W9" secondAttribute="centerY" id="M96-Bh-7CA"/>
-                                            <constraint firstItem="VvL-hz-Uf9" firstAttribute="centerX" secondItem="uE6-aP-7W9" secondAttribute="centerX" id="rXD-xq-bvq"/>
+                                            <constraint firstItem="ZKa-wL-wgu" firstAttribute="centerX" secondItem="uE6-aP-7W9" secondAttribute="centerX" id="0d7-eg-fiL"/>
+                                            <constraint firstItem="ZKa-wL-wgu" firstAttribute="centerY" secondItem="uE6-aP-7W9" secondAttribute="centerY" id="D1g-CJ-vib"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTi-Uv-pDv">
@@ -1067,6 +1066,8 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="sGz-iW-raB" id="6bk-4o-qwD"/>
+                        <outlet property="itemNameLbl" destination="dor-If-BKU" id="Agi-MO-SUu"/>
+                        <outlet property="priceLbl" destination="ZKa-wL-wgu" id="Ege-1x-vDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTN-eE-6Zl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1086,7 +1087,6 @@
         <image name="menEclipse" width="30" height="30"/>
         <image name="menu" width="51" height="33"/>
         <image name="search" width="51" height="50"/>
-        <image name="shoes" width="640" height="506"/>
         <image name="shopBag" width="44" height="42"/>
         <image name="signOut" width="37" height="31"/>
         <image name="womenEclipse" width="30" height="30"/>

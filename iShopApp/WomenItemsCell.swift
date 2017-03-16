@@ -14,22 +14,27 @@ class WomenItemsCell: UITableViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
-
+    
+    var imageUrlString: String?
     var item: Item!
 
     func configureCell(item: Item, img: UIImage? = nil) {
         self.item = item
+        imageUrlString = item.imageURL
         if img != nil {
             self.itemImg.image = img
-            print("IMAGE FROM CACHE")
         } else {
             let imageURL = URL(string: item.imageURL)
             Alamofire.request(imageURL!).responseImage(completionHandler: { (response) in
                 guard let image = response.result.value else {
                     return
                 }
-                self.itemImg.image = image
-                imageCache.add(image, withIdentifier: item.imageURL)
+                DispatchQueue.main.async(execute: {
+                    if self.imageUrlString == item.imageURL {
+                        self.itemImg.image = image
+                    }
+                    imageCache.add(image, withIdentifier: item.imageURL)
+                })
             })
         }
         self.itemTitle.text = item.title

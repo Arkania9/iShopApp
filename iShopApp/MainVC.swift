@@ -22,10 +22,7 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
     }
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return featured.count
     }
