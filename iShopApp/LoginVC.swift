@@ -43,7 +43,10 @@ class LoginVC: UIViewController {
             if error != nil {
                 print("KAMIL: UNABLE to authethicate with Firebase")
             } else {
-                self.performSegue(withIdentifier: "showMainVC", sender: nil)
+                if let user = user {
+                    let userData = ["provider":credential.provider]
+                    self.sendCurrentUserInfoToFirebase(id: user.uid, userData: userData)
+                }
             }
         })
     }
@@ -54,12 +57,17 @@ class LoginVC: UIViewController {
                 _ = FIRAuthErrorCode.errorCodeInvalidEmail
             self.errorField.text = "Email or Password are wrong"
             } else {
-                self.performSegue(withIdentifier: "showMainVC", sender: nil)
-                self.emailField.text = ""
-                self.pwdField.text = ""
-                self.errorField.text = ""
+                if let user = user {
+                    let userData = ["provider":user.providerID]
+                    self.sendCurrentUserInfoToFirebase(id: user.uid, userData: userData)
+                }
             }
         })
+    }
+    
+    func sendCurrentUserInfoToFirebase(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        performSegue(withIdentifier: "showMainVC", sender: nil)
     }
     
     @IBAction func fbLoginPressed(_ sender: AnyObject) {

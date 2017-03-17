@@ -152,8 +152,8 @@
 				8E76A3861E769403009EE371 /* RegisterVC.swift */,
 				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
 				8E724CB91E793EEC00984B69 /* WomenVC.swift */,
-				8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */,
 				8E724CC21E79931200984B69 /* DetailsVC.swift */,
+				8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
