@@ -1080,10 +1080,10 @@
             </objects>
             <point key="canvasLocation" x="1784.8" y="741.67916041979015"/>
         </scene>
-        <!--CartVC-->
+        <!--OrderVC-->
         <scene sceneID="64K-ho-OOy">
             <objects>
-                <viewController id="ZuO-fn-RCm" customClass="CartVC" customModule="iShopApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZuO-fn-RCm" customClass="OrderVC" customModule="iShopApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vy7-DH-GKW"/>
                         <viewControllerLayoutGuide type="bottom" id="eJd-cJ-U3T"/>
@@ -1133,7 +1133,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-iD-HPK">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="100" id="CP7-yO-XTF" customClass="CartCell" customModule="iShopApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" rowHeight="100" id="CP7-yO-XTF" customClass="OrderCell" customModule="iShopApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CP7-yO-XTF" id="ugL-Du-5Sr">
@@ -1265,6 +1265,9 @@
                                                 <state key="normal" title="X">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="removeOrderPressed:" destination="ZuO-fn-RCm" eventType="touchUpInside" id="mp3-Fk-ieL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.22743049263954163" green="0.22746250033378601" blue="0.2274196445941925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1301,6 +1304,7 @@
                     <connections>
                         <outlet property="menuButton" destination="mQD-m6-XxD" id="llk-QJ-iYg"/>
                         <outlet property="tableView" destination="Eo8-iD-HPK" id="OfV-MS-BRK"/>
+                        <outlet property="totalPriceLbl" destination="S8j-iu-h0x" id="1E9-0J-U8W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFK-4G-f6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
