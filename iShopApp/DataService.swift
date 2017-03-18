@@ -29,6 +29,12 @@ class DataService {
         return _REF_USERS
     }
     
+    var REF_USER_CURRENT: FIRDatabaseReference {
+        let uid = UserDefaults.standard.object(forKey: "UserID")
+        let user = REF_USERS.child(uid! as! String)
+        return user
+    }
+    
     var REF_WOMEN_ST: FIRStorageReference {
         return _REF_WOMEN_ST
     }

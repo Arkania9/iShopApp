@@ -7,12 +7,16 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
-class ItemDetails {
+struct ItemDetails {
     
     private var _title: String!
     private var _price: Double!
     private var _imageURL: String!
+    private var _itemKey: String!
+    var _itemRef: FIRDatabaseReference!
+    var currentPrice: Double!
     
     var title: String {
         return _title
@@ -23,6 +27,11 @@ class ItemDetails {
     var imageURL: String {
         return _imageURL
     }
+    var itemKey: String {
+        return _itemKey
+    }
+
+    
     var imageArray = [String]()
 
     init(title: String, price: Double, imageURL: String) {
@@ -43,14 +52,20 @@ class ItemDetails {
         imageArray += [image1,image2,image3]
     }
     
-    init(snapshotData: Dictionary<String, AnyObject>) {
+    init(itemKey: String, snapshotData: Dictionary<String, AnyObject>) {
         guard let title = snapshotData["title"] as? String,
-        let price = snapshotData["price"] as? Double else {
+        let price = snapshotData["price"] as? Double,
+        let images = snapshotData["images"] as? Dictionary<String, AnyObject>,
+        let image = images["image1"] as? String else {
             return
         }
         self._title = title
         self._price = price
+        self._imageURL = image
+        self._itemKey = itemKey
+        _itemRef = DataService.ds.REF_WOMEN_DB.child(_itemKey)
     }
     
+
     
 }

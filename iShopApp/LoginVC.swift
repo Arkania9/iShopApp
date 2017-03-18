@@ -68,6 +68,7 @@ class LoginVC: UIViewController {
     func sendCurrentUserInfoToFirebase(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         performSegue(withIdentifier: "showMainVC", sender: nil)
+        UserDefaults.standard.set(id, forKey: "UserID")
     }
     
     @IBAction func fbLoginPressed(_ sender: AnyObject) {

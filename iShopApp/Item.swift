@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item {
+struct Item {
     
     private var _title: String!
     private var _imageURL: String!

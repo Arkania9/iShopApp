@@ -15,14 +15,21 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var itemNameLbl: UILabel!
+    
     var itemKey: String!
     var imageArray = [String]()
+    var myItem: ItemDetails!
+    var currentPrice: Double!
+    var checkCart = false
+    let cartRef = DataService.ds.REF_USER_CURRENT.child("cart")
+    
     
         override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         downloadItemDetailsFromFirebase()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,8 +54,8 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             guard let snapshotData = snapshot.value as? Dictionary<String, AnyObject> else {
                 return
             }
-            let itemDetails = ItemDetails(snapshotData: snapshotData)
-            self.configureItemInfo(item: itemDetails)
+            self.myItem = ItemDetails(itemKey: self.itemKey, snapshotData: snapshotData)
+            self.configureItemInfo(item: self.myItem)
             let itemDetailsImages = ItemDetails(imageData: snapshotData)
             self.imageArray += itemDetailsImages.imageArray
         })
@@ -57,6 +64,61 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     func configureItemInfo(item: ItemDetails) {
         itemNameLbl.text = item.title
         priceLbl.text = "$\(item.price)"
+    }
+    
+    func checkItemsDetailsInCart() {
+        cartRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.setItemValue()
+            } else {
+                guard let snapshotData = snapshot.value as? Dictionary<String, AnyObject> else {
+                    return
+                }
+                self.checkItemExistisInCart(snapshotData: snapshotData)
+            }
+        })
+    }
+    
+    func checkItemExistisInCart(snapshotData: Dictionary<String, AnyObject>) {
+        for snap in snapshotData.keys {
+            if snap == itemKey && snap != "totalPrice" {
+                checkCart = true
+                break
+            }
+        }
+        if !checkCart {
+            checkCart = false
+            setItemValue()
+        }
+    }
+    
+    func setItemValue() {
+        let itemRefInCart = cartRef.child(itemKey!)
+        let itemData: Dictionary<String, AnyObject> = [
+            "price":myItem.price as AnyObject,
+            "title":myItem.title as AnyObject,
+            "image":myItem.imageURL as AnyObject
+        ]
+        itemRefInCart.setValue(itemData)
+        checkAndUpdateTotalPriceInCart(isInCart: checkCart)
+    }
+    
+    func checkAndUpdateTotalPriceInCart(isInCart: Bool) {
+        if !isInCart {
+            let totalPriceInCart = cartRef.child("totalPrice")
+            totalPriceInCart.observeSingleEvent(of: .value, with: { (snapshot) in
+                if let _ = snapshot.value as? NSNull {
+                    totalPriceInCart.setValue(self.myItem.price)
+                } else {
+                    let total = snapshot.value as! Double
+                    totalPriceInCart.setValue(total + self.myItem.price)
+                }
+            })
+        }
+    }
+    
+    @IBAction func addToCartPressed(_ sender: AnyObject) {
+        checkItemsDetailsInCart()
     }
     
     @IBAction func backBtnPressed(_ sender: AnyObject) {

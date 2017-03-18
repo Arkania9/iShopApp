@@ -1021,6 +1021,9 @@
                                                 <state key="normal" title="ADD TO CART">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addToCartPressed:" destination="KCw-tq-NSo" eventType="touchUpInside" id="gcp-I1-ehj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90980392156862744" green="0.49411764705882355" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
