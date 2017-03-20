@@ -44,36 +44,58 @@ class OrderVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let orderObj = orderArray[indexPath.row]
+        cartRef.child(orderObj.itemKey).removeValue()
+        self.orderArray.remove(at: indexPath.row)
+        
+        cartRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let cartData = snapshot.value as? Dictionary<String, AnyObject>,
+            var totalPrice = cartData["totalPrice"] as? Double else {
+                    return
+            }
+            if self.orderArray.count == 0 {
+                self.cartRef.updateChildValues(["totalPrice": 0])
+                self.totalPriceLbl.text = "$0.0"
+            } else {
+                totalPrice = totalPrice - orderObj.price
+                self.cartRef.updateChildValues(["totalPrice": totalPrice])
+                self.totalPriceLbl.text = "$\(totalPrice)"
+            }
+        })
+        self.tableView.reloadData()
+    }
+    
     func downloadEachItemFromCart() {
-        cartRef.observe(.value, with: { (snapshot) in
+        cartRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
+                print("No Items in cart")
             } else {
                 if let cartData = snapshot.value as? Dictionary<String, AnyObject> {
-                    for cart in cartData {
-                        if cart.key == "totalPrice" {
-                            self.totalPriceLbl.text = "$\(cart.value as! Double)"
-                            continue
-                        }
-                        let orderObj = Order(orderData: cart.value as! Dictionary<String, AnyObject>)
-                        self.orderArray.append(orderObj)
-                    }
+                    self.addNewItemToCart(cartData: cartData)
                 }
-                self.tableView.reloadData()
             }
         })
     }
     
-    func removeItemsFromCart() {
-        cartRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let _ = snapshot.value as? NSNull {
-                self.orderArray = []
-            } else {
-                self.orderArray = []
-                self.cartRef.removeValue()
+    func addNewItemToCart(cartData: Dictionary<String, AnyObject>) {
+        for cart in cartData {
+            if cart.key == "totalPrice" {
+                self.totalPriceLbl.text = "$\(cart.value as! Double)"
+                continue
             }
-            self.tableView.reloadData()
-            self.totalPriceLbl.text = "$0.0"
-        })
+            let orderObj = Order(itemKey: cart.key, orderData: cart.value as! Dictionary<String, AnyObject>)
+            self.orderArray.append(orderObj)
+        }
+        self.tableView.reloadData()
+    }
+    
+    func removeItemsFromCart() {
+        cartRef.removeValue()
+        self.orderArray = []
+        self.totalPriceLbl.text = "$0.0"
+        self.tableView.reloadData()
     }
     
     @IBAction func removeOrderPressed(_ sender: AnyObject) {
