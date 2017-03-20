@@ -27,6 +27,10 @@ class OrderVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orderArray.count
     }
@@ -45,18 +49,21 @@ class OrderVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
         let orderObj = orderArray[indexPath.row]
         cartRef.child(orderObj.itemKey).removeValue()
         self.orderArray.remove(at: indexPath.row)
-        
+        deleteItemAndCellRow(orderObj: orderObj)
+        self.tableView.reloadData()
+    }
+    
+    func deleteItemAndCellRow(orderObj: Order) {
         cartRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let cartData = snapshot.value as? Dictionary<String, AnyObject>,
-            var totalPrice = cartData["totalPrice"] as? Double else {
+                var totalPrice = cartData["totalPrice"] as? Double else {
                     return
             }
             if self.orderArray.count == 0 {
-                self.cartRef.updateChildValues(["totalPrice": 0])
+                self.cartRef.removeValue()
                 self.totalPriceLbl.text = "$0.0"
             } else {
                 totalPrice = totalPrice - orderObj.price
@@ -64,7 +71,6 @@ class OrderVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.totalPriceLbl.text = "$\(totalPrice)"
             }
         })
-        self.tableView.reloadData()
     }
     
     func downloadEachItemFromCart() {
