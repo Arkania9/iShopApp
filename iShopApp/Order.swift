@@ -15,6 +15,7 @@ struct Order {
     private var _title: String!
     private var _itemKey: String!
     private var _color: String!
+    private var _size: String!
     
     var imageURL: String {
         return _imageURL
@@ -31,13 +32,16 @@ struct Order {
     var color: String {
         return _color
     }
-    
+    var size: String {
+        return _size
+    }
     
     init(itemKey: String, orderData: Dictionary<String, AnyObject>) {
         guard let itemImage = orderData["image"] as? String,
         let itemPrice = orderData["price"] as? Double,
         let itemTitle = orderData["title"] as? String,
-        let itemColor = orderData["color"] as? String else {
+        let itemColor = orderData["color"] as? String,
+        let itemSize = orderData["size"] as? String else {
             return
         }
         self._imageURL = itemImage
@@ -45,6 +49,7 @@ struct Order {
         self._title = itemTitle
         self._itemKey = itemKey
         self._color = itemColor
+        self._size = itemSize
     }
     
     

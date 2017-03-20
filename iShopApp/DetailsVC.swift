@@ -12,7 +12,8 @@ import AlamofireImage
 import Alamofire
 import AMPopTip
 
-class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
+UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var itemNameLbl: UILabel!
@@ -23,6 +24,7 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @IBOutlet weak var blue: UIButton!
     @IBOutlet weak var pink: UIButton!
     @IBOutlet weak var black: UIButton!
+    @IBOutlet weak var pickerView: UIPickerView!
     
     var itemKey: String!
     var imageArray = [String]()
@@ -32,6 +34,8 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     let cartRef = DataService.ds.REF_USER_CURRENT.child("cart")
     let popTip = AMPopTip()
     var color = "black"
+    var size = "M"
+    let sizes = ["XS","S","M","L","XL","XXL"]
     
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +45,6 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             self.popTip.edgeMargin = 5
             self.popTip.offset = 2
             self.popTip.edgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-            
             downloadItemDetailsFromFirebase()
     }
     
@@ -60,6 +63,18 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             return cell
         }
        return UICollectionViewCell()
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return sizes[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return sizes.count
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        size = sizes[row]
     }
     
     func downloadItemDetailsFromFirebase() {
@@ -111,7 +126,8 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             "price":myItem.price as AnyObject,
             "title":myItem.title as AnyObject,
             "image":myItem.imageURL as AnyObject,
-            "color":color as AnyObject
+            "color":color as AnyObject,
+            "size":size as AnyObject
         ]
         itemRefInCart.setValue(itemData)
         checkAndUpdateTotalPriceInCart(isInCart: checkCart)
@@ -172,7 +188,6 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         let colorsArray = ["Red","Green","Blue","Pink","Black"]
         color = colorsArray[sender.tag]
         switchColor(sender)
-        
     }
 }
 

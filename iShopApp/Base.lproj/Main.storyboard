@@ -1059,13 +1059,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90928596258163452" green="0.49349933862686157" blue="0.24311882257461548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose colour:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jR-iH-BTl">
-                                <frame key="frameInset" minX="125" minY="390" width="125" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-sF-G0x" userLabel="red">
                                 <frame key="frameInset" minX="96" minY="419" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1106,6 +1099,28 @@
                                     <action selector="colorPressed:" destination="KCw-tq-NSo" eventType="touchUpInside" id="DNQ-tp-yzI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose size:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMX-hs-4UF">
+                                <frame key="frameInset" minX="125" minY="467" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z94-nO-AV3">
+                                <frame key="frameInset" minX="127" minY="496" height="100" maxX="127"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KCw-tq-NSo" id="n49-61-xhr"/>
+                                    <outlet property="delegate" destination="KCw-tq-NSo" id="uo6-u2-f7D"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose colour:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jR-iH-BTl">
+                                <frame key="frameInset" minX="125" minY="390" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1133,6 +1148,7 @@
                         <outlet property="collectionView" destination="sGz-iW-raB" id="6bk-4o-qwD"/>
                         <outlet property="green" destination="Lvq-ru-xQe" id="zA3-h4-ZIE"/>
                         <outlet property="itemNameLbl" destination="dor-If-BKU" id="Agi-MO-SUu"/>
+                        <outlet property="pickerView" destination="z94-nO-AV3" id="Ebj-WQ-6h8"/>
                         <outlet property="pink" destination="6ck-hS-7hO" id="UF9-sy-hbZ"/>
                         <outlet property="popTipView" destination="RAQ-FX-2Mj" id="z3Z-lc-85O"/>
                         <outlet property="priceLbl" destination="ZKa-wL-wgu" id="Ege-1x-vDn"/>
@@ -1288,6 +1304,7 @@
                                             <outlet property="itemColor" destination="wh4-Ea-qJd" id="vQH-r8-Nl4"/>
                                             <outlet property="itemImg" destination="z9z-Zg-xOL" id="cZR-rM-O6B"/>
                                             <outlet property="itemPrice" destination="efd-gM-uQ7" id="0qV-7Z-Q6g"/>
+                                            <outlet property="itemSize" destination="dlh-uN-nlA" id="vgB-Q3-aDt"/>
                                             <outlet property="itemTitle" destination="Vo0-M1-u0n" id="z9g-67-Y0x"/>
                                         </connections>
                                     </tableViewCell>
