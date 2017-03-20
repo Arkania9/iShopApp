@@ -1585,6 +1585,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.23135176299999999" green="0.23138415809999999" blue="0.231340766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="itemPrice" destination="MJr-xN-Z6S" id="GhL-TM-Aug"/>
+                                            <outlet property="itemQnt" destination="cDt-gI-7h8" id="2lh-MP-by7"/>
+                                            <outlet property="itemTitle" destination="IOJ-Ib-ruA" id="a1h-Uv-Xbm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1639,6 +1644,9 @@
                                 <state key="normal" title="CONFIRM">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmOrderPressed:" destination="V4b-Eq-abY" eventType="touchUpInside" id="Q4Q-sL-j4Z"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbs-B2-eix">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -1679,6 +1687,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="VIR-L6-wRi" id="cTD-ks-AUG"/>
+                        <outlet property="totalPriceLbl" destination="j09-i5-e8B" id="z3r-1r-hHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dok-es-vWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

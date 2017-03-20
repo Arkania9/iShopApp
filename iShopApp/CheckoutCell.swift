@@ -10,6 +10,15 @@ import UIKit
 
 class CheckoutCell: UITableViewCell {
 
+    @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
+    @IBOutlet weak var itemQnt: UILabel!
+    var checkObj: Check!
     
+    func configureCheckout(checkObj: Check) {
+        self.checkObj = checkObj
+        itemTitle.text = checkObj.title
+        itemPrice.text = "$\(checkObj.price)"
+    }
 
 }
