@@ -13,4 +13,5 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'SwiftKeychainWrapper'
 pod 'AlamofireImage', '~> 3.1'
+pod 'AMPopTip'
 end

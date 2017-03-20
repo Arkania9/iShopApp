@@ -15,6 +15,7 @@ class OrderCell: UITableViewCell {
     @IBOutlet weak var itemImg: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
+    @IBOutlet weak var itemColor: UILabel!
     
     var order: Order!
     
@@ -22,6 +23,7 @@ class OrderCell: UITableViewCell {
         self.order = orderObj
         itemTitle.text = orderObj.title
         itemPrice.text = "$\(orderObj.price)"
+        itemColor.text = "COLOR: \(orderObj.color)"
         if img != nil {
             self.itemImg.image = img
         } else {

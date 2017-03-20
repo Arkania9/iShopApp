@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A60A100FFD4D6766D2EB771233B2CB0C'
-               BlueprintName = 'SwiftKeychainWrapper'
+               BlueprintIdentifier = '9F64F691C3C68E6FDA6FB1E22434EBA5'
+               BlueprintName = 'AMPopTip'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftKeychainWrapper.framework'>
+               BuildableName = 'AMPopTip.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

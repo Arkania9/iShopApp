@@ -10,11 +10,19 @@ import UIKit
 import FirebaseDatabase
 import AlamofireImage
 import Alamofire
+import AMPopTip
 
 class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var itemNameLbl: UILabel!
+    @IBOutlet weak var addToCartBtn: UIButton!
+    @IBOutlet weak var popTipView: UIView!
+    @IBOutlet weak var red: UIButton!
+    @IBOutlet weak var green: UIButton!
+    @IBOutlet weak var blue: UIButton!
+    @IBOutlet weak var pink: UIButton!
+    @IBOutlet weak var black: UIButton!
     
     var itemKey: String!
     var imageArray = [String]()
@@ -22,14 +30,19 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     var currentPrice: Double!
     var checkCart = false
     let cartRef = DataService.ds.REF_USER_CURRENT.child("cart")
-    
+    let popTip = AMPopTip()
+    var color = "black"
     
         override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        downloadItemDetailsFromFirebase()
-        
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            self.popTip.shouldDismissOnTap = true
+            self.popTip.edgeMargin = 5
+            self.popTip.offset = 2
+            self.popTip.edgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+            
+            downloadItemDetailsFromFirebase()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -97,7 +110,8 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         let itemData: Dictionary<String, AnyObject> = [
             "price":myItem.price as AnyObject,
             "title":myItem.title as AnyObject,
-            "image":myItem.imageURL as AnyObject
+            "image":myItem.imageURL as AnyObject,
+            "color":color as AnyObject
         ]
         itemRefInCart.setValue(itemData)
         checkAndUpdateTotalPriceInCart(isInCart: checkCart)
@@ -114,9 +128,38 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                     totalPriceInCart.setValue(total + self.myItem.price)
                 }
             })
-        }
+        } 
     }
     
+    func changeColorAlpha(maxAlpha: UIButton, color1: UIButton, color2: UIButton,color3: UIButton, color4: UIButton) {
+        maxAlpha.alpha = 1.0
+        color1.alpha = 0.4
+        color2.alpha = 0.4
+        color3.alpha = 0.4
+        color4.alpha = 0.4
+    }
+    
+    func switchColor(_ sender: AnyObject) {
+        switch sender.tag {
+        case 0:
+            self.changeColorAlpha(maxAlpha: red, color1: green, color2: blue, color3: pink, color4: black)
+            break
+        case 1:
+            self.changeColorAlpha(maxAlpha: green, color1: red, color2: blue, color3: pink, color4: black)
+            break
+        case 2:
+            self.changeColorAlpha(maxAlpha: blue, color1: red, color2: green, color3: pink, color4: black)
+            break
+        case 3:
+            self.changeColorAlpha(maxAlpha: pink, color1: red, color2: green, color3: blue, color4: black)
+            break
+        case 4:
+            self.changeColorAlpha(maxAlpha: black, color1: red, color2: green, color3: blue, color4: pink)
+            break
+        default: break
+        }
+    }
+
     @IBAction func addToCartPressed(_ sender: AnyObject) {
         checkItemsDetailsInCart()
     }
@@ -124,4 +167,17 @@ class DetailsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @IBAction func backBtnPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func colorPressed(_ sender: AnyObject) {
+        let colorsArray = ["Red","Green","Blue","Pink","Black"]
+        color = colorsArray[sender.tag]
+        switchColor(sender)
+        
+    }
 }
+
+
+
+
+
+

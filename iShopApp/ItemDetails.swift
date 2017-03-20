@@ -15,8 +15,6 @@ struct ItemDetails {
     private var _price: Double!
     private var _imageURL: String!
     private var _itemKey: String!
-    var _itemRef: FIRDatabaseReference!
-    var currentPrice: Double!
     
     var title: String {
         return _title
@@ -63,7 +61,7 @@ struct ItemDetails {
         self._price = price
         self._imageURL = image
         self._itemKey = itemKey
-        _itemRef = DataService.ds.REF_WOMEN_DB.child(_itemKey)
+
     }
     
 
