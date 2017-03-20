@@ -116,7 +116,12 @@ UIPickerViewDelegate, UIPickerViewDataSource {
         }
         if !checkCart {
             checkCart = false
+            self.popTip.popoverColor = UIColor(red: 232/255, green: 126/255, blue: 62/255, alpha: 1.0)
+            self.popTip.showText("Item was added", direction: AMPopTipDirection.up, maxWidth: 200, in: self.view, fromFrame: self.popTipView.frame, duration: 1.5)
             setItemValue()
+        } else {
+            self.popTip.popoverColor = UIColor(red: 128/255, green: 28/255, blue: 28/255, alpha: 1.0)
+            self.popTip.showText("Item is in cart", direction: AMPopTipDirection.up, maxWidth: 200, in: self.view, fromFrame: self.popTipView.frame, duration: 1.5)
         }
     }
     
