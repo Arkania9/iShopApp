@@ -15,6 +15,7 @@ import Alamofire
 
 class WomenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuButton: UIButton!
     
     var items = [Item]()
 
@@ -22,6 +23,9 @@ class WomenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for:UIControlEvents.touchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
         downloadCurrentItemFromFirebase()
     }
     
@@ -55,10 +59,6 @@ class WomenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             self.tableView.reloadData()
         })
-    }
-    
-    @IBAction func backBtnPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

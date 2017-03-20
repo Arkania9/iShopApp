@@ -30,8 +30,14 @@ class DataService {
     }
     
     var REF_USER_CURRENT: FIRDatabaseReference {
-        let uid = UserDefaults.standard.object(forKey: "UserID")
-        let user = REF_USERS.child(uid! as! String)
+        let id = "12412412421"
+        var user = REF_USERS.child(id)
+        if UserDefaults.standard.object(forKey: "UserID") == nil {
+            print("NOTHING HERE")
+        } else {
+            let uid = UserDefaults.standard.object(forKey: "UserID")
+            user = REF_USERS.child(uid as! String)
+        }
         return user
     }
     

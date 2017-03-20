@@ -34,7 +34,7 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     let cartRef = DataService.ds.REF_USER_CURRENT.child("cart")
     let popTip = AMPopTip()
     var color = "black"
-    var size = "M"
+    var size = "XS"
     let sizes = ["XS","S","M","L","XL","XXL"]
     
         override func viewDidLoad() {
@@ -175,6 +175,12 @@ UIPickerViewDelegate, UIPickerViewDataSource {
         default: break
         }
     }
+    
+    @IBAction func colorPressed(_ sender: AnyObject) {
+        let colorsArray = ["Red","Green","Blue","Pink","Black"]
+        color = colorsArray[sender.tag]
+        switchColor(sender)
+    }
 
     @IBAction func addToCartPressed(_ sender: AnyObject) {
         checkItemsDetailsInCart()
@@ -184,11 +190,7 @@ UIPickerViewDelegate, UIPickerViewDataSource {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func colorPressed(_ sender: AnyObject) {
-        let colorsArray = ["Red","Green","Blue","Pink","Black"]
-        color = colorsArray[sender.tag]
-        switchColor(sender)
-    }
+
 }
 
 
