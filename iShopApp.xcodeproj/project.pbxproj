@@ -39,6 +39,8 @@
 		8EE9256D1E76CF65005DDDB3 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256C1E76CF65005DDDB3 /* Featured.swift */; };
 		8EE9256F1E76EAF2005DDDB3 /* SlideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */; };
 		8EFA04EF1E75F2800033C1CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */; };
+		8EFB4DC51E817316001B2DB7 /* ManItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB4DC41E817316001B2DB7 /* ManItemsCell.swift */; };
+		8EFB4DC71E817393001B2DB7 /* ManVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB4DC61E817393001B2DB7 /* ManVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuVC.swift; sourceTree = "<group>"; };
 		8EFA04EE1E75F2800033C1CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EFA04F41E75FC0A0033C1CE /* iShopApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iShopApp.entitlements; sourceTree = "<group>"; };
+		8EFB4DC41E817316001B2DB7 /* ManItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManItemsCell.swift; sourceTree = "<group>"; };
+		8EFB4DC61E817393001B2DB7 /* ManVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 				8E76A3861E769403009EE371 /* RegisterVC.swift */,
 				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
 				8E724CB91E793EEC00984B69 /* WomenVC.swift */,
+				8EFB4DC61E817393001B2DB7 /* ManVC.swift */,
 				8E724CC21E79931200984B69 /* DetailsVC.swift */,
 				8E7480271E7D3C5000BC0A1D /* OrderVC.swift */,
 				8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */,
@@ -177,6 +182,7 @@
 			children = (
 				8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */,
 				8E724CBB1E79407100984B69 /* WomenItemsCell.swift */,
+				8EFB4DC41E817316001B2DB7 /* ManItemsCell.swift */,
 				8E899F761E7B0EA8004D5CC4 /* DetailsCell.swift */,
 				8E7480291E7D431400BC0A1D /* OrderCell.swift */,
 				8E387F4A1E805F4D00755BF6 /* CheckoutCell.swift */,
@@ -367,6 +373,7 @@
 				8E724CBC1E79407100984B69 /* WomenItemsCell.swift in Sources */,
 				8E724CC11E79429500984B69 /* Item.swift in Sources */,
 				8E74802A1E7D431400BC0A1D /* OrderCell.swift in Sources */,
+				8EFB4DC51E817316001B2DB7 /* ManItemsCell.swift in Sources */,
 				8E387F4B1E805F4D00755BF6 /* CheckoutCell.swift in Sources */,
 				8E2049891E76B1C100FF0DE4 /* MainVC.swift in Sources */,
 				8E724CC91E79AA9C00984B69 /* Constants.swift in Sources */,
@@ -374,6 +381,7 @@
 				8EE9256F1E76EAF2005DDDB3 /* SlideMenuVC.swift in Sources */,
 				8E08325E1E7579F0001F6B64 /* LoginVC.swift in Sources */,
 				8EE9256B1E76BE1E005DDDB3 /* ImageCollectionCell.swift in Sources */,
+				8EFB4DC71E817393001B2DB7 /* ManVC.swift in Sources */,
 				8E08325C1E7579F0001F6B64 /* AppDelegate.swift in Sources */,
 				8E724CC71E79A39F00984B69 /* ItemDetails.swift in Sources */,
 				8E724CC31E79931200984B69 /* DetailsVC.swift in Sources */,
