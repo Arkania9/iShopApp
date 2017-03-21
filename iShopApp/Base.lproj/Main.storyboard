@@ -183,7 +183,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCa-gx-bgF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCa-gx-bgF">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Na9-V9-IrN"/>
                                     <constraint firstAttribute="width" constant="28" id="jOg-hv-U0D"/>
@@ -1307,7 +1307,7 @@
                                                         <constraint firstAttribute="width" constant="90" id="xs1-V6-tMB"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mri-Z4-vHu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mri-Z4-vHu">
                                                     <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1464,6 +1464,7 @@
                                         <state key="normal" image="arrowBack"/>
                                         <connections>
                                             <action selector="backBtnPressed:" destination="KCw-tq-NSo" eventType="touchUpInside" id="7s9-eY-UJY"/>
+                                            <action selector="backBtnPressed:" destination="V4b-Eq-abY" eventType="touchUpInside" id="N3t-Cc-jXO"/>
                                             <action selector="backBtnPressed:" destination="PG2-1E-XqB" eventType="touchUpInside" id="vtJ-V0-6Ox"/>
                                         </connections>
                                     </button>
@@ -1478,7 +1479,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-en-nZp"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, please confirm your order." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5F-FT-ik2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please confirm your order." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5F-FT-ik2">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6jE-5M-Tjx"/>
                                     <constraint firstAttribute="width" constant="262" id="sLI-8v-t3u"/>
@@ -1613,7 +1614,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL: $1365.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j09-i5-e8B">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL: $0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j09-i5-e8B">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="138" id="NtJ-70-nMd"/>
                                             <constraint firstAttribute="height" constant="28" id="faP-qa-Jqr"/>
@@ -1714,8 +1715,8 @@
         <image name="womenEclipse" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PxG-4e-x3c"/>
         <segue reference="NV7-pg-mNT"/>
-        <segue reference="f2D-iB-o4D"/>
+        <segue reference="PxG-4e-x3c"/>
+        <segue reference="LQa-Bf-eLl"/>
     </inferredMetricsTieBreakers>
 </document>

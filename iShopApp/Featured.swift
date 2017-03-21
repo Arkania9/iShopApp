@@ -9,7 +9,7 @@
 import UIKit
 
 
-class Featured {
+struct Featured {
 
     var title = ""
     var featuredImage: UIImage

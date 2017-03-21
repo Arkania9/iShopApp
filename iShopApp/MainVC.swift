@@ -17,7 +17,7 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-
+        startTimer()
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for:UIControlEvents.touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
@@ -26,12 +26,28 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return featured.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCollectionCell {
             cell.featured = featured[indexPath.row]
             return cell
         }
         return UICollectionViewCell()
+    }
+    
+    func scrollToNextCell(){
+        let cellSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        let contentOffset = collectionView.contentOffset
+        if collectionView.contentSize.width <= collectionView.contentOffset.x + cellSize.width {
+            collectionView.scrollRectToVisible(CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        } else {
+            collectionView.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true)
+        }
+    }
+
+    func startTimer() {
+        Timer.scheduledTimer(timeInterval: 4.0, target: self, selector:
+            #selector(MainVC.scrollToNextCell), userInfo: nil, repeats: true)
     }
 
 }

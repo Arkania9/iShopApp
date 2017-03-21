@@ -64,6 +64,9 @@ class CheckoutVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func confirmOrderPressed(_ sender: AnyObject) {
         
     }
-    
+
+    @IBAction func backBtnPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
