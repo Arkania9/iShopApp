@@ -47,6 +47,9 @@
                                         <state key="normal" title="MEN">
                                             <color key="titleColor" red="0.094117647058823528" green="0.55686274509803924" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="fXT-61-Ig9" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="c1f-dp-oLh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1187,6 +1190,8 @@
                         <outlet property="collectionView" destination="sGz-iW-raB" id="6bk-4o-qwD"/>
                         <outlet property="green" destination="Lvq-ru-xQe" id="zA3-h4-ZIE"/>
                         <outlet property="itemNameLbl" destination="dor-If-BKU" id="Agi-MO-SUu"/>
+                        <outlet property="navTitle" destination="2uA-VH-KAB" id="ZXf-VF-buc"/>
+                        <outlet property="navView" destination="C6L-eU-5U4" id="aZ2-Kt-SqG"/>
                         <outlet property="pickerView" destination="z94-nO-AV3" id="Ebj-WQ-6h8"/>
                         <outlet property="pink" destination="6ck-hS-7hO" id="UF9-sy-hbZ"/>
                         <outlet property="popTipView" destination="RAQ-FX-2Mj" id="z3Z-lc-85O"/>
@@ -1730,6 +1735,9 @@
                                             <constraint firstAttribute="width" constant="30" id="uxw-GZ-Tlp"/>
                                         </constraints>
                                         <state key="normal" image="home"/>
+                                        <connections>
+                                            <segue destination="ElW-qM-5x0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="WAP-6H-7yg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.096069656312465668" green="0.55583846569061279" blue="0.55328148603439331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1799,6 +1807,7 @@
                                             <outlet property="itemImg" destination="sfa-AI-aDl" id="ph3-th-Xa2"/>
                                             <outlet property="itemPrice" destination="s2G-pA-3jU" id="yfl-Ua-Mds"/>
                                             <outlet property="itemTitle" destination="EW6-Rz-CmD" id="IKN-K4-RPl"/>
+                                            <segue destination="KCw-tq-NSo" kind="show" identifier="goToDetailsFromMan" id="x9h-PM-urr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1846,8 +1855,10 @@
         <image name="womenEclipse" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="NV7-pg-mNT"/>
         <segue reference="PxG-4e-x3c"/>
-        <segue reference="LQa-Bf-eLl"/>
-        <segue reference="Bv1-Uv-xsT"/>
+        <segue reference="c1f-dp-oLh"/>
+        <segue reference="WAP-6H-7yg"/>
+        <segue reference="x9h-PM-urr"/>
     </inferredMetricsTieBreakers>
 </document>

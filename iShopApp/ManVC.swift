@@ -59,4 +59,17 @@ class ManVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         })
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetailsFromMan" {
+            if let destination = segue.destination as? DetailsVC {
+                destination.viewColor = UIColor(red: 24/255, green: 142/255, blue: 141/255, alpha: 1.0)
+                destination.currentRefDb = DataService.ds.REF_MAN_DB
+                destination.itemKey = items[tableView.indexPathForSelectedRow!.row].itemKey
+                destination.titleNavigation = "MAN"
+            }
+        }
+    }
+    
+    
+    
 }

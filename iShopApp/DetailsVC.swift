@@ -25,6 +25,8 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var pink: UIButton!
     @IBOutlet weak var black: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var navView: UIView!
+    @IBOutlet weak var navTitle: UILabel!
     
     var itemKey: String!
     var imageArray = [String]()
@@ -36,11 +38,18 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     var color = "black"
     var size = "XS"
     let sizes = ["XS","S","M","L","XL","XXL"]
+    var viewColor: UIColor!
+    var titleNavigation: String!
+    var currentRefDb: FIRDatabaseReference!
+
     
         override func viewDidLoad() {
         super.viewDidLoad()
             collectionView.delegate = self
             collectionView.dataSource = self
+            navView.backgroundColor = viewColor
+            navTitle.text = titleNavigation
+            
             self.popTip.shouldDismissOnTap = true
             self.popTip.edgeMargin = 5
             self.popTip.offset = 2
@@ -78,7 +87,7 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func downloadItemDetailsFromFirebase() {
-        DataService.ds.REF_WOMEN_DB.child("\(itemKey!)").observe(.value, with: { (snapshot) in
+        currentRefDb.child("\(itemKey!)").observe(.value, with: { (snapshot) in
             guard let snapshotData = snapshot.value as? Dictionary<String, AnyObject> else {
                 return
             }

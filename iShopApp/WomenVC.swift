@@ -65,6 +65,9 @@ class WomenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "goToWomenDetails" {
             if let destination = segue.destination as? DetailsVC {
                 destination.itemKey = items[tableView.indexPathForSelectedRow!.row].itemKey
+                destination.currentRefDb = DataService.ds.REF_WOMEN_DB
+                destination.viewColor = UIColor(red: 194/255, green: 192/255, blue: 39/255, alpha: 1.0)
+                destination.titleNavigation = "WOMAN"
             }
         }
     }
