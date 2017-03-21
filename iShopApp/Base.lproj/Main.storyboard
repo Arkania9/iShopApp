@@ -97,6 +97,9 @@
                                         <state key="normal" title="KIDS">
                                             <color key="titleColor" red="0.8980392157" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="d7g-qR-NCZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Sep-FC-rox"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -195,6 +198,28 @@
                                 <color key="textColor" red="0.92549019610000005" green="0.50196078430000002" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D9v-Ow-Rg4" userLabel="Home">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBlack" translatesAutoresizingMaskIntoConstraints="NO" id="APC-mw-Osr">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="A7I-x5-6fF"/>
+                                            <constraint firstAttribute="width" constant="25" id="p6M-pG-JOP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-qW-wvW">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="OH7-71-Gpd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ElW-qM-5x0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="VvD-Qr-Cax"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,11 +234,13 @@
                             <constraint firstItem="xNH-PM-im3" firstAttribute="top" secondItem="Noe-AL-GJy" secondAttribute="bottom" constant="120" id="VGD-aa-oF8"/>
                             <constraint firstItem="0dr-WC-qk7" firstAttribute="top" secondItem="dzS-eW-Aeh" secondAttribute="bottom" constant="30" id="Zhx-yk-Ldb"/>
                             <constraint firstAttribute="trailing" secondItem="7Cb-fH-fAC" secondAttribute="trailing" id="acg-Br-AfJ"/>
+                            <constraint firstItem="Ml3-HY-FKd" firstAttribute="top" secondItem="D9v-Ow-Rg4" secondAttribute="bottom" constant="40" id="aeX-Jv-pYo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vXJ-4N-q8g" secondAttribute="trailing" constant="16" id="fln-I8-Qaa"/>
-                            <constraint firstItem="Ml3-HY-FKd" firstAttribute="top" secondItem="rIl-q4-ElV" secondAttribute="bottom" constant="120" id="j4R-eW-ejC"/>
+                            <constraint firstItem="D9v-Ow-Rg4" firstAttribute="top" secondItem="rIl-q4-ElV" secondAttribute="bottom" constant="55" id="g5G-HC-bLp"/>
                             <constraint firstItem="MEm-uo-rxO" firstAttribute="top" secondItem="Ml3-HY-FKd" secondAttribute="bottom" constant="40" id="jNp-a9-7d0"/>
                             <constraint firstItem="MEm-uo-rxO" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="l8o-8p-0H6"/>
                             <constraint firstItem="Ml3-HY-FKd" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="mwz-tl-3eQ"/>
+                            <constraint firstItem="D9v-Ow-Rg4" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="pbV-R0-nch"/>
                             <constraint firstItem="lCa-gx-bgF" firstAttribute="centerY" secondItem="Cv3-xz-KKN" secondAttribute="centerY" id="rEe-Zx-43D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dzS-eW-Aeh" secondAttribute="trailing" constant="16" id="rcH-5d-iug"/>
                             <constraint firstItem="7Cb-fH-fAC" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leading" id="rnG-wI-iCd"/>
@@ -312,7 +339,8 @@
                                     <constraint firstItem="ymx-dd-kdS" firstAttribute="centerX" secondItem="in9-9l-mDW" secondAttribute="centerX" id="lru-1H-KiZ"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="f95-sM-RDi">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="f95-sM-RDi">
+                                <frame key="frameInset" width="375" height="7"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0E-tz-eD0">
                                         <color key="backgroundColor" red="0.76078431372549016" green="0.75294117647058822" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1833,7 +1861,139 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbY-Fv-K34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="1595"/>
+            <point key="canvasLocation" x="1121" y="1565"/>
+        </scene>
+        <!--KidsVC-->
+        <scene sceneID="0N1-BJ-4om">
+            <objects>
+                <viewController id="d7g-qR-NCZ" customClass="KidsVC" customModule="iShopApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMq-XB-j7B"/>
+                        <viewControllerLayoutGuide type="bottom" id="C9K-0C-vSV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A4x-IN-kIY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbd-xC-XUH">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KIDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p75-n8-07z">
+                                        <fontDescription key="fontDescription" name="DroidSerif" family="Droid Serif" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72X-Rn-022">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="V2l-7a-wbM"/>
+                                            <constraint firstAttribute="height" constant="25" id="hej-rG-knP"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-fT-fB7">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="YjD-2x-ySt"/>
+                                            <constraint firstAttribute="width" constant="30" id="nbx-De-rv7"/>
+                                        </constraints>
+                                        <state key="normal" image="home"/>
+                                        <connections>
+                                            <segue destination="ElW-qM-5x0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ZMy-wY-lEE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88697797060012817" green="0.35585558414459229" blue="0.35499250888824463" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="p75-n8-07z" firstAttribute="centerY" secondItem="Cbd-xC-XUH" secondAttribute="centerY" id="6dR-Pb-eQB"/>
+                                    <constraint firstAttribute="height" constant="75" id="Qnk-fQ-mXf"/>
+                                    <constraint firstItem="72X-Rn-022" firstAttribute="leading" secondItem="Cbd-xC-XUH" secondAttribute="leading" constant="16" id="Y3n-YH-f00"/>
+                                    <constraint firstItem="72X-Rn-022" firstAttribute="centerY" secondItem="Cbd-xC-XUH" secondAttribute="centerY" id="dDD-J5-ldd"/>
+                                    <constraint firstItem="p75-n8-07z" firstAttribute="centerX" secondItem="Cbd-xC-XUH" secondAttribute="centerX" id="lWk-iq-bVc"/>
+                                    <constraint firstAttribute="trailing" secondItem="cRA-fT-fB7" secondAttribute="trailing" constant="16" id="nSJ-Ok-sQV"/>
+                                    <constraint firstItem="cRA-fT-fB7" firstAttribute="centerY" secondItem="Cbd-xC-XUH" secondAttribute="centerY" id="vWf-jz-ddU"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tCj-P0-6pu">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="KidsItemsCell" rowHeight="260" id="PbD-D6-NON" customClass="KidsItemsCell" customModule="iShopApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PbD-D6-NON" id="MgE-fK-oLJ">
+                                            <frame key="frameInset" width="375" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-8x-g9D"/>
+                                                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dh6-eI-Vbx">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="YCl-jo-vGc"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-eH-NmV">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="1IH-Na-rJJ"/>
+                                                        <constraint firstAttribute="width" constant="210" id="LVK-lg-dqo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DroidSerif-Bold" family="Droid Serif" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qo-ir-jYi">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="98" id="HGm-0q-ZUe"/>
+                                                        <constraint firstAttribute="height" constant="21" id="iZr-mc-W13"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DroidSerif-Bold" family="Droid Serif" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2ek-eH-NmV" secondAttribute="bottom" constant="5" id="8DK-I8-4Cb"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dh6-eI-Vbx" secondAttribute="trailing" id="BI5-oR-cCH"/>
+                                                <constraint firstItem="Dh6-eI-Vbx" firstAttribute="leading" secondItem="MgE-fK-oLJ" secondAttribute="leading" id="HGl-ss-a2D"/>
+                                                <constraint firstItem="2ek-eH-NmV" firstAttribute="leading" secondItem="MgE-fK-oLJ" secondAttribute="leadingMargin" id="cfF-fW-TIh"/>
+                                                <constraint firstAttribute="bottom" secondItem="8bZ-8x-g9D" secondAttribute="bottom" constant="-144" id="eDA-uJ-hKf"/>
+                                                <constraint firstItem="8bZ-8x-g9D" firstAttribute="top" secondItem="MgE-fK-oLJ" secondAttribute="top" id="k1Z-NO-ivA"/>
+                                                <constraint firstItem="8bZ-8x-g9D" firstAttribute="leading" secondItem="MgE-fK-oLJ" secondAttribute="leading" id="nya-zA-fSp"/>
+                                                <constraint firstAttribute="trailing" secondItem="8bZ-8x-g9D" secondAttribute="trailing" id="rKi-bA-WMg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dh6-eI-Vbx" secondAttribute="bottom" id="sz7-GJ-rlt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0Qo-ir-jYi" secondAttribute="bottom" constant="5" id="xH4-L7-hh0"/>
+                                                <constraint firstItem="0Qo-ir-jYi" firstAttribute="trailing" secondItem="MgE-fK-oLJ" secondAttribute="trailingMargin" id="yDV-51-h4e"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemImg" destination="8bZ-8x-g9D" id="Fr9-PL-Rga"/>
+                                            <outlet property="itemPrice" destination="0Qo-ir-jYi" id="FP3-HQ-YfH"/>
+                                            <outlet property="itemTitle" destination="2ek-eH-NmV" id="5hL-eX-3gT"/>
+                                            <segue destination="KCw-tq-NSo" kind="show" identifier="goToDetailsFromKids" id="ZuK-gq-eyP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cbd-xC-XUH" firstAttribute="top" secondItem="A4x-IN-kIY" secondAttribute="top" id="2Y1-3d-zEb"/>
+                            <constraint firstItem="C9K-0C-vSV" firstAttribute="top" secondItem="tCj-P0-6pu" secondAttribute="bottom" id="D55-S2-lik"/>
+                            <constraint firstItem="tCj-P0-6pu" firstAttribute="leading" secondItem="A4x-IN-kIY" secondAttribute="leading" id="MU3-e1-Uoy"/>
+                            <constraint firstItem="Cbd-xC-XUH" firstAttribute="leading" secondItem="A4x-IN-kIY" secondAttribute="leading" id="iQ6-aF-4ox"/>
+                            <constraint firstAttribute="trailing" secondItem="Cbd-xC-XUH" secondAttribute="trailing" id="mLZ-Oh-aVY"/>
+                            <constraint firstAttribute="trailing" secondItem="tCj-P0-6pu" secondAttribute="trailing" id="o0d-st-Nhe"/>
+                            <constraint firstItem="tCj-P0-6pu" firstAttribute="top" secondItem="Cbd-xC-XUH" secondAttribute="bottom" id="vzV-R1-jUP"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="menuButton" destination="72X-Rn-022" id="zrp-Ge-Zxc"/>
+                        <outlet property="tableView" destination="tCj-P0-6pu" id="uas-9L-m5e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHL-Km-nIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942" y="1565"/>
         </scene>
     </scenes>
     <resources>
@@ -1846,6 +2006,7 @@
         <image name="arrowBack" width="22" height="43"/>
         <image name="bgImage1" width="640" height="877"/>
         <image name="home" width="48" height="48"/>
+        <image name="homeBlack" width="48" height="48"/>
         <image name="kidsEclipse" width="30" height="30"/>
         <image name="menEclipse" width="30" height="30"/>
         <image name="menu" width="51" height="33"/>
@@ -1855,10 +2016,10 @@
         <image name="womenEclipse" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NV7-pg-mNT"/>
         <segue reference="PxG-4e-x3c"/>
         <segue reference="c1f-dp-oLh"/>
-        <segue reference="WAP-6H-7yg"/>
+        <segue reference="NV7-pg-mNT"/>
+        <segue reference="VvD-Qr-Cax"/>
         <segue reference="x9h-PM-urr"/>
     </inferredMetricsTieBreakers>
 </document>

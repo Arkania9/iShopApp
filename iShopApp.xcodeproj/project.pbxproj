@@ -18,6 +18,8 @@
 		8E0832751E757B36001F6B64 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */; };
 		8E0832761E757B36001F6B64 /* DroidSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */; };
 		8E0832771E757B36001F6B64 /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */; };
+		8E18AE9F1E818FB300F8B90C /* KidsItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18AE9E1E818FB300F8B90C /* KidsItemsCell.swift */; };
+		8E18AEA11E81902300F8B90C /* KidsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18AEA01E81902300F8B90C /* KidsVC.swift */; };
 		8E2049891E76B1C100FF0DE4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2049881E76B1C100FF0DE4 /* MainVC.swift */; };
 		8E387F491E805F1600755BF6 /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E387F481E805F1600755BF6 /* CheckoutVC.swift */; };
 		8E387F4B1E805F4D00755BF6 /* CheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E387F4A1E805F4D00755BF6 /* CheckoutCell.swift */; };
@@ -59,6 +61,8 @@
 		8E0832711E757B36001F6B64 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E0832721E757B36001F6B64 /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
 		8E0832731E757B36001F6B64 /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
+		8E18AE9E1E818FB300F8B90C /* KidsItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsItemsCell.swift; sourceTree = "<group>"; };
+		8E18AEA01E81902300F8B90C /* KidsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsVC.swift; sourceTree = "<group>"; };
 		8E2049881E76B1C100FF0DE4 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8E387F481E805F1600755BF6 /* CheckoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		8E387F4A1E805F4D00755BF6 /* CheckoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCell.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
 				8E724CB91E793EEC00984B69 /* WomenVC.swift */,
 				8EFB4DC61E817393001B2DB7 /* ManVC.swift */,
+				8E18AEA01E81902300F8B90C /* KidsVC.swift */,
 				8E724CC21E79931200984B69 /* DetailsVC.swift */,
 				8E7480271E7D3C5000BC0A1D /* OrderVC.swift */,
 				8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */,
@@ -183,6 +188,7 @@
 				8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */,
 				8E724CBB1E79407100984B69 /* WomenItemsCell.swift */,
 				8EFB4DC41E817316001B2DB7 /* ManItemsCell.swift */,
+				8E18AE9E1E818FB300F8B90C /* KidsItemsCell.swift */,
 				8E899F761E7B0EA8004D5CC4 /* DetailsCell.swift */,
 				8E7480291E7D431400BC0A1D /* OrderCell.swift */,
 				8E387F4A1E805F4D00755BF6 /* CheckoutCell.swift */,
@@ -367,6 +373,7 @@
 				8E74802C1E7D45FB00BC0A1D /* Order.swift in Sources */,
 				8E899F771E7B0EA8004D5CC4 /* DetailsCell.swift in Sources */,
 				8E4DB4531E807758005576B2 /* Check.swift in Sources */,
+				8E18AE9F1E818FB300F8B90C /* KidsItemsCell.swift in Sources */,
 				8E7480281E7D3C5000BC0A1D /* OrderVC.swift in Sources */,
 				8E724CBA1E793EEC00984B69 /* WomenVC.swift in Sources */,
 				8E387F491E805F1600755BF6 /* CheckoutVC.swift in Sources */,
@@ -374,6 +381,7 @@
 				8E724CC11E79429500984B69 /* Item.swift in Sources */,
 				8E74802A1E7D431400BC0A1D /* OrderCell.swift in Sources */,
 				8EFB4DC51E817316001B2DB7 /* ManItemsCell.swift in Sources */,
+				8E18AEA11E81902300F8B90C /* KidsVC.swift in Sources */,
 				8E387F4B1E805F4D00755BF6 /* CheckoutCell.swift in Sources */,
 				8E2049891E76B1C100FF0DE4 /* MainVC.swift in Sources */,
 				8E724CC91E79AA9C00984B69 /* Constants.swift in Sources */,
