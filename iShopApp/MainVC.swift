@@ -46,7 +46,7 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func startTimer() {
-        Timer.scheduledTimer(timeInterval: 4.0, target: self, selector:
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector:
             #selector(MainVC.scrollToNextCell), userInfo: nil, repeats: true)
     }
 

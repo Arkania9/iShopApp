@@ -12,13 +12,14 @@ class CheckoutCell: UITableViewCell {
 
     @IBOutlet weak var itemTitle: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
-    @IBOutlet weak var itemQnt: UILabel!
+    @IBOutlet weak var itemSize: UILabel!
     var checkObj: Check!
     
     func configureCheckout(checkObj: Check) {
         self.checkObj = checkObj
         itemTitle.text = checkObj.title
         itemPrice.text = "$\(checkObj.price)"
+        itemSize.text = checkObj.size
     }
 
 }

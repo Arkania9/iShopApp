@@ -231,12 +231,12 @@
                             <constraint firstItem="vXJ-4N-q8g" firstAttribute="top" secondItem="0dr-WC-qk7" secondAttribute="bottom" constant="30" id="CoV-W4-nJG"/>
                             <constraint firstItem="xNH-PM-im3" firstAttribute="top" secondItem="7Cb-fH-fAC" secondAttribute="bottom" id="T9E-g5-KD4"/>
                             <constraint firstItem="Noe-AL-GJy" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="TJA-LY-4zi"/>
-                            <constraint firstItem="xNH-PM-im3" firstAttribute="top" secondItem="Noe-AL-GJy" secondAttribute="bottom" constant="120" id="VGD-aa-oF8"/>
+                            <constraint firstItem="xNH-PM-im3" firstAttribute="top" secondItem="Noe-AL-GJy" secondAttribute="bottom" constant="80" id="VGD-aa-oF8"/>
                             <constraint firstItem="0dr-WC-qk7" firstAttribute="top" secondItem="dzS-eW-Aeh" secondAttribute="bottom" constant="30" id="Zhx-yk-Ldb"/>
                             <constraint firstAttribute="trailing" secondItem="7Cb-fH-fAC" secondAttribute="trailing" id="acg-Br-AfJ"/>
                             <constraint firstItem="Ml3-HY-FKd" firstAttribute="top" secondItem="D9v-Ow-Rg4" secondAttribute="bottom" constant="40" id="aeX-Jv-pYo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vXJ-4N-q8g" secondAttribute="trailing" constant="16" id="fln-I8-Qaa"/>
-                            <constraint firstItem="D9v-Ow-Rg4" firstAttribute="top" secondItem="rIl-q4-ElV" secondAttribute="bottom" constant="55" id="g5G-HC-bLp"/>
+                            <constraint firstItem="D9v-Ow-Rg4" firstAttribute="top" secondItem="rIl-q4-ElV" secondAttribute="bottom" constant="80" id="g5G-HC-bLp"/>
                             <constraint firstItem="MEm-uo-rxO" firstAttribute="top" secondItem="Ml3-HY-FKd" secondAttribute="bottom" constant="40" id="jNp-a9-7d0"/>
                             <constraint firstItem="MEm-uo-rxO" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="l8o-8p-0H6"/>
                             <constraint firstItem="Ml3-HY-FKd" firstAttribute="leading" secondItem="zHx-vi-siA" secondAttribute="leadingMargin" constant="8" id="mwz-tl-3eQ"/>
@@ -880,7 +880,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-56-zdW">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WomenItemsCell" rowHeight="260" id="SuS-Pu-32N" customClass="WomenItemsCell" customModule="iShopApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="260"/>
@@ -1535,7 +1535,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fag-Gp-Uu7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fag-Gp-Uu7">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="4JT-qd-aQA"/>
                                             <constraint firstAttribute="width" constant="30" id="A9B-zq-hWf"/>
@@ -1624,7 +1624,7 @@
                                         <color key="backgroundColor" red="0.23135176299999999" green="0.23138415809999999" blue="0.231340766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="itemPrice" destination="MJr-xN-Z6S" id="GhL-TM-Aug"/>
-                                            <outlet property="itemQnt" destination="cDt-gI-7h8" id="2lh-MP-by7"/>
+                                            <outlet property="itemSize" destination="cDt-gI-7h8" id="bUN-Nx-Uba"/>
                                             <outlet property="itemTitle" destination="IOJ-Ib-ruA" id="a1h-Uv-Xbm"/>
                                         </connections>
                                     </tableViewCell>
@@ -1780,7 +1780,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-zD-xsf">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ManItemsCell" rowHeight="260" id="Ysd-T9-4ap" customClass="ManItemsCell" customModule="iShopApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="260"/>
@@ -1912,7 +1912,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tCj-P0-6pu">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="KidsItemsCell" rowHeight="260" id="PbD-D6-NON" customClass="KidsItemsCell" customModule="iShopApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="260"/>
@@ -2016,10 +2016,10 @@
         <image name="womenEclipse" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PxG-4e-x3c"/>
-        <segue reference="c1f-dp-oLh"/>
         <segue reference="NV7-pg-mNT"/>
-        <segue reference="VvD-Qr-Cax"/>
-        <segue reference="x9h-PM-urr"/>
+        <segue reference="c1f-dp-oLh"/>
+        <segue reference="PxG-4e-x3c"/>
+        <segue reference="ZuK-gq-eyP"/>
+        <segue reference="ZMy-wY-lEE"/>
     </inferredMetricsTieBreakers>
 </document>

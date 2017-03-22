@@ -157,6 +157,56 @@
 			name = "Custom Fonts";
 			sourceTree = "<group>";
 		};
+		8E18AEA31E81956C00F8B90C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8E08325D1E7579F0001F6B64 /* LoginVC.swift */,
+				8E76A3861E769403009EE371 /* RegisterVC.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		8E18AEA41E81958500F8B90C /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
+				8E724CB91E793EEC00984B69 /* WomenVC.swift */,
+				8EFB4DC61E817393001B2DB7 /* ManVC.swift */,
+				8E18AEA01E81902300F8B90C /* KidsVC.swift */,
+				8E724CC21E79931200984B69 /* DetailsVC.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		8E18AEA51E81959D00F8B90C /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				8E7480271E7D3C5000BC0A1D /* OrderVC.swift */,
+				8E387F481E805F1600755BF6 /* CheckoutVC.swift */,
+			);
+			name = Order;
+			sourceTree = "<group>";
+		};
+		8E18AEA61E8195B800F8B90C /* Items Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8E724CBB1E79407100984B69 /* WomenItemsCell.swift */,
+				8EFB4DC41E817316001B2DB7 /* ManItemsCell.swift */,
+				8E18AE9E1E818FB300F8B90C /* KidsItemsCell.swift */,
+				8E899F761E7B0EA8004D5CC4 /* DetailsCell.swift */,
+			);
+			name = "Items Cell";
+			sourceTree = "<group>";
+		};
+		8E18AEA71E8195C200F8B90C /* OrderCell */ = {
+			isa = PBXGroup;
+			children = (
+				8E7480291E7D431400BC0A1D /* OrderCell.swift */,
+				8E387F4A1E805F4D00755BF6 /* CheckoutCell.swift */,
+			);
+			name = OrderCell;
+			sourceTree = "<group>";
+		};
 		8E724CBD1E79413000984B69 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,16 +218,10 @@
 		8EFA04F01E75F35D0033C1CE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E08325D1E7579F0001F6B64 /* LoginVC.swift */,
-				8E76A3861E769403009EE371 /* RegisterVC.swift */,
-				8E2049881E76B1C100FF0DE4 /* MainVC.swift */,
-				8E724CB91E793EEC00984B69 /* WomenVC.swift */,
-				8EFB4DC61E817393001B2DB7 /* ManVC.swift */,
-				8E18AEA01E81902300F8B90C /* KidsVC.swift */,
-				8E724CC21E79931200984B69 /* DetailsVC.swift */,
-				8E7480271E7D3C5000BC0A1D /* OrderVC.swift */,
+				8E18AEA31E81956C00F8B90C /* Login */,
+				8E18AEA41E81958500F8B90C /* Items */,
+				8E18AEA51E81959D00F8B90C /* Order */,
 				8EE9256E1E76EAF2005DDDB3 /* SlideMenuVC.swift */,
-				8E387F481E805F1600755BF6 /* CheckoutVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -186,12 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				8EE9256A1E76BE1E005DDDB3 /* ImageCollectionCell.swift */,
-				8E724CBB1E79407100984B69 /* WomenItemsCell.swift */,
-				8EFB4DC41E817316001B2DB7 /* ManItemsCell.swift */,
-				8E18AE9E1E818FB300F8B90C /* KidsItemsCell.swift */,
-				8E899F761E7B0EA8004D5CC4 /* DetailsCell.swift */,
-				8E7480291E7D431400BC0A1D /* OrderCell.swift */,
-				8E387F4A1E805F4D00755BF6 /* CheckoutCell.swift */,
+				8E18AEA61E8195B800F8B90C /* Items Cell */,
+				8E18AEA71E8195C200F8B90C /* OrderCell */,
 			);
 			name = View;
 			sourceTree = "<group>";
